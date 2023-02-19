@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <title>Resume to doc Now!</title>
+    <style>
+        body {
+            background-image: url("img/background.png");
+        }
+
+        .my-picture {
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            min-width: 500px;
+            margin-top: 8px;
+            margin-bottom: 32px;
+            max-width: 600px;
+            padding: 16px;
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .menu-bottom {
+            position: fixed;
+            height: 48px;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+            background-color: #00b500;
+            padding: 12px;
+        }
+
+        .menu-bottom .button-now {
+            text-decoration: none;
+            background-color: rgba(255, 255, 255, 0);
+            border: 1px white solid;
+            padding: 4px 16px;
+            color: white;
+            transition: 0.5s;
+        }
+
+        .menu-bottom .button-now:hover {
+            padding: 4px 32px;
+        }
+
+        .more {
+            width: 100%;
+            text-align: center;
+        }
+
+        .more button {
+            margin: 12px;
+            border-radius: 1000px;
+            padding: 0 12px 4px 12px;
+            font-size: 24px;
+            align-self: baseline;
+            border: none;
+            background-color: #00b500;
+            color: white;
+        }
+
+        h4 {
+            margin: 10px 0;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 100px
+        }
+
+        input {
+            width: 100%;
+        }
+
+        label {
+            width: 100%;
+        }
+
+        li {
+            list-style: none;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        img {
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        img:hover {
+            opacity: 0.5;
+        }
+    </style>
+    <script src="lib/docx.js"></script>
+    <script src="lib/fileSaver.js"></script>
+ </head>
+
+<body>
+<div class="container wrap">
+    <div class="container">
+        <h3>Current Resume:</h3>
+        <div class="my-picture">
+            <input id="profileImageUpload" type="file">
+            <label>
+                <b>My picture: </b>
+                <img id="profileImage" src="img/me.jpg" style="width: 200px;border-radius: 1000px" alt="my resume picture">
+            </label>
+        </div>
+        <hr>
+        <label>
+            <b>About you:</b>
+            <textarea
+                    placeholder="I'm a software engineer with more than 10 years of experience in backend and frontend development. I am used to working in teams using agile practices"></textarea>
+        </label>
+
+        <h4>Personal data:</h4>
+        <!--        TODO: add here the proper boostrap form templating-->
+
+        <ul>
+            <li>
+                <label>
+                    <b> Full Name:</b>
+                    <input id="fullName" type="text" placeholder="Joan Doe">
+                </label>
+            </li>
+            <li>
+                <label>
+                    <b> Citizenship:</b>
+                    <input type="text" placeholder="Neverland, Grey skull castle">
+                </label>
+            </li>
+            <li>
+                <label>
+                    <b> Current location:</b>
+                    <input type="text" placeholder="Tomorrowland">
+                </label>
+            </li>
+            <li>
+                <label>
+                    <b> Telegram:</b>
+                    <input type="text" placeholder="@JoanDoe">
+                </label>
+            </li>
+            <li>
+                <label>
+                    <b> E-mail:</b>
+                    <input type="text" placeholder="joan@doe.com">
+                </label>
+            </li>
+            <li>
+                <label>
+                    <b> Phone number:</b>
+                    <input type="text" placeholder="777-777777">
+                </label>
+            </li>
+            <li>
+                <label>
+                    <b>Github repository:</b>
+                    <input type="text" placeholder="github.com/you-repo">
+                </label>
+            </li>
+            <li>
+                <label>
+                    <b>Personal site:</b>
+                    <input type="text" placeholder="my-web.com">
+                </label>
+            </li>
+            <div class="more">
+                <button>+</button>
+            </div>
+        </ul>
+        <h4>Work experience:</h4>
+        <ul>
+            <li><b>Working place:</b> Centro de estudios constitucionales
+                <ul>
+                    <li><b>Start and finish dates:</b> 2017-2018</li>
+                    <li><b>Work description:</b>This was one of my first projects when finishing my education at
+                        university. In collaboration with an interdisciplinary group in political sciences and
+                        constitutional law at the head of the former President of Bolivia, Dr. Eduardo Rodriguez Velze,
+                        I got the chance to support the research and publication of the first free online web
+                        encyclopedia of the Political Constitution of the Plurinational State of Bolivia,
+                        econstitucional.com
+                    </li>
+                    <li><b>Work responsabilities:</b> The project required the implementation of a simple interface for
+                        publication of what the researchers were interested to be published, the whole process,
+                        organization and design of the texts were handle by the managers in the project, some strict
+                        guidelines were proposed in order to store the data as it was being publish and provide it in a
+                        web application.
+                    </li>
+                    <li><b>Skills:</b> Linux, GIT, Bash, Scala, Scala testing libraries, Akka, Akka HTTP, Slick,
+                        Postgres, Kafka, Kafka Streams, Javascript, Figma,, React, React testing libraries, Polymer, Vue
+                    </li>
+                </ul>
+            </li>
+            <div class="more">
+                <button>+</button>
+            </div>
+        </ul>
+    </div>
+</div>
+<div class="menu-bottom">
+    <a class="button-now" href="files/123456.docx"><small>Resume to doc</small> Now!</a>
+    <button id="createFromTemplate" type="button">Click to generate document</button>
+</div>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template.js"></script>
+</body>
+</html>
