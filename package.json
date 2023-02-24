@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "docx": "^7.8.2",
+    "file-saver": "^2.0.5"
+  },
+  "name": "resumetodocx",
+  "description": "This is a google chrome extension that can easily create a resume for a job interview, it provides a simple theme and some small guidelines in order to produce a resume in Docx format fast and simple.",
+  "version": "1.0.0",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "dev": "watchify main.js -o bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

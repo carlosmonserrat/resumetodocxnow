@@ -1,0 +1,88 @@
+body {
+    background-image: url("img/background.png");
+}
+
+.my-picture {
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    min-width: 500px;
+    margin-top: 8px;
+    margin-bottom: 32px;
+    max-width: 600px;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.menu-bottom {
+    position: fixed;
+    height: 48px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    background-color: #00b500;
+    padding: 12px;
+}
+
+.menu-bottom .button-now {
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px white solid;
+    padding: 4px 16px;
+    color: white;
+    transition: 0.5s;
+}
+
+.menu-bottom .button-now:hover {
+    padding: 4px 32px;
+}
+
+.more {
+    width: 100%;
+    text-align: center;
+}
+
+.more button {
+    margin: 12px;
+    border-radius: 1000px;
+    padding: 0 12px 4px 12px;
+    font-size: 24px;
+    align-self: baseline;
+    border: none;
+    background-color: #00b500;
+    color: white;
+}
+
+h4 {
+    margin: 10px 0;
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px
+}
+
+input {
+    width: 100%;
+}
+
+label {
+    width: 100%;
+}
+
+li {
+    list-style: none;
+    width: 100%;
+    margin-top: 8px;
+}
+
+img {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+img:hover {
+    opacity: 0.5;
+}
