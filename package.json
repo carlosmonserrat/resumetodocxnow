@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "docx": "^7.8.2",
-    "file-saver": "^2.0.5"
+    "file-saver": "^2.0.5",
+    "uuid": "^9.0.0"
   },
   "name": "resumetodocx",
   "description": "This is a google chrome extension that can easily create a resume for a job interview, it provides a simple theme and some small guidelines in order to produce a resume in Docx format fast and simple.",

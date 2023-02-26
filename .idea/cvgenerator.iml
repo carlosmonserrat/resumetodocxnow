@@ -10,5 +10,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="docx" level="application" />
     <orderEntry type="library" name="FileSaver.js" level="application" />
+    <orderEntry type="library" name="jspdf" level="application" />
   </component>
 </module>

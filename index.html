@@ -9,82 +9,42 @@
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Resume to doc Now!</title>
- </head>
+</head>
 
 <body>
 <div class="container wrap">
     <div class="container">
-        <h3>Current Resume:</h3>
+        <h3>My Resume:</h3>
         <div class="my-picture">
-            <input id="profileImageUpload" type="file">
             <label>
                 <b>My picture: </b>
-                <img id="profileImage" src=" img/me.jpg" style="width: 200px;border-radius: 1000px" alt="my resume picture">
+                <img id="profileImage" src=" img/me.jpg" style="width: 200px;border-radius: 1000px"
+                     alt="my resume picture">
             </label>
         </div>
         <hr>
         <label>
-            <b>About you:</b>
+            <b>Who you are?</b>
             <textarea
-                    placeholder="I'm a software engineer with more than 10 years of experience in backend and frontend development. I am used to working in teams using agile practices"></textarea>
+                    placeholder="I'm a developer with more than 100 years of experience in quantum software development. I am used to working in teams using telepathic agile good practices."></textarea>
         </label>
 
         <h4>Personal data:</h4>
         <!--        TODO: add here the proper boostrap form templating-->
 
-        <ul>
-            <li>
-                <label>
-                    <b> Full Name:</b>
-                    <input id="fullName" type="text" placeholder="Joan Doe">
-                </label>
-            </li>
-            <li>
-                <label>
-                    <b> Citizenship:</b>
-                    <input type="text" placeholder="Neverland, Grey skull castle">
-                </label>
-            </li>
-            <li>
-                <label>
-                    <b> Current location:</b>
-                    <input type="text" placeholder="Tomorrowland">
-                </label>
-            </li>
-            <li>
-                <label>
-                    <b> Telegram:</b>
-                    <input type="text" placeholder="@JoanDoe">
-                </label>
-            </li>
-            <li>
-                <label>
-                    <b> E-mail:</b>
-                    <input type="text" placeholder="joan@doe.com">
-                </label>
-            </li>
-            <li>
-                <label>
-                    <b> Phone number:</b>
-                    <input type="text" placeholder="777-777777">
-                </label>
-            </li>
-            <li>
-                <label>
-                    <b>Github repository:</b>
-                    <input type="text" placeholder="github.com/you-repo">
-                </label>
-            </li>
-            <li>
-                <label>
-                    <b>Personal site:</b>
-                    <input type="text" placeholder="my-web.com">
-                </label>
-            </li>
-            <div class="more">
-                <button>+</button>
-            </div>
-        </ul>
+        <div id="personalData"></div>
+
+        <style>
+            .more {
+                margin-top: 32px;
+            }
+        </style>
+
+        <div class="more">
+            <input id="personalDataNew" type="text" placeholder="Add new">
+            <button id="morePersonalData">+</button>
+        </div>
+
         <h4>Work experience:</h4>
         <ul>
             <li><b>Working place:</b> Centro de estudios constitucionales
@@ -115,6 +75,7 @@
     </div>
 </div>
 <div class="menu-bottom">
+    <a href="other.html" target="_blank">preview</a>
     <button id="createFromTemplate" class="button-now"><small>Resume to doc</small> Now!</button>
 </div>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
