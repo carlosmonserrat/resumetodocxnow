@@ -1,4 +1,5 @@
 const basicResumeGenerator = require('./js/document_generators/basic-resume-generator.js')
+const gptDocument = require('./js/document_generators/gpt-generated-resume')
 const personalData = require("./js/document_generators/personal-data-constructor");
 
 const generateFromTemplateButton = document.getElementById("createFromTemplate")
@@ -14,7 +15,6 @@ const {v4: uuidv4} = require('uuid');
 imgProfile.src = profilePicture;
 
 imgProfile.onclick = () => {
-    const reader = new FileReader();
     const inputFile = document.createElement("input")
     inputFile.type = "file"
 
@@ -34,7 +34,8 @@ imgProfile.onclick = () => {
 
 
 generateFromTemplateButton.onclick = () => {
-    basicResumeGenerator.generate(profilePicture)
+    //basicResumeGenerator.generate(profilePicture)
+    gptDocument.generate()
 }
 
 personalDataContainer.appendChild(
